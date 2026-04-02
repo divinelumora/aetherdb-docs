@@ -1,33 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #080B0F;
+  color: #E2E8F0;
+  font-family: 'Geist', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.code { font-family: 'JetBrains Mono', monospace; }
+
+pre {
+  background: #0D1117;
+  border: 1px solid #1C2333;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
 }
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  background: #0D1117;
+  border: 1px solid #1C2333;
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: #00D4FF;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #E2E8F0;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0D1117; }
+::-webkit-scrollbar-thumb { background: #1C2333; border-radius: 2px; }
+
+.sidebar-link {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #8892A4;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+
+.sidebar-link:hover { background: #0D1117; color: #E2E8F0; }
+.sidebar-link.active { background: rgba(0,212,255,0.1); color: #00D4FF; border-left: 2px solid #00D4FF; }
+
+.prose h1 { font-size: 28px; font-weight: 600; color: #E2E8F0; margin-bottom: 16px; }
+.prose h2 { font-size: 20px; font-weight: 500; color: #E2E8F0; margin: 32px 0 12px; }
+.prose h3 { font-size: 16px; font-weight: 500; color: #E2E8F0; margin: 24px 0 8px; }
+.prose p { color: #8892A4; line-height: 1.7; margin-bottom: 16px; }
+.prose ul { color: #8892A4; padding-left: 20px; margin-bottom: 16px; }
+.prose li { margin-bottom: 6px; line-height: 1.6; }
+.prose a { color: #00D4FF; text-decoration: none; }
+.prose a:hover { text-decoration: underline; }
