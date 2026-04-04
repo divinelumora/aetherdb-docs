@@ -23,7 +23,7 @@ export default function IntroPage() {
 
       <pre><code>{`Your App
   └── aetherdb-js SDK
-        └── https://aetherdb.cloud
+        └── https://app.aetherdb.cloud
               ├── REST API (:8080)
               ├── gRPC (:50051)
               └── PostgreSQL
@@ -33,7 +33,7 @@ export default function IntroPage() {
 
       <h2>Hosted vs self-hosted</h2>
       <p>
-        AetherDB is available as a hosted service at <a href="https://aetherdb.cloud">aetherdb.cloud</a>. The source code is open and can be self-hosted on any Linux server.
+        AetherDB is available as a hosted service at <a href="https://app.aetherdb.cloud">aetherdb.cloud</a>. The source code is open and can be self-hosted on any Linux server.
       </p>
 
       <h2>Next steps</h2>

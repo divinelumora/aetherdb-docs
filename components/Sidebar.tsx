@@ -22,7 +22,7 @@ const nav = [
     section: 'API reference',
     links: [
       { href: '/docs/api', label: 'Overview' },
-      { href: '/docs/api/auth', label: 'Authentication' },
+      { href: '/docs/api/authentication', label: 'Authentication' },
       { href: '/docs/api/tenant', label: 'Tenant database' },
       { href: '/docs/api/projects', label: 'Projects & API keys' },
       { href: '/docs/api/realtime', label: 'Realtime' },
@@ -32,9 +32,9 @@ const nav = [
   {
     section: 'Platform',
     links: [
-      { href: '/docs/multi-tenancy', label: 'Multi-tenancy' },
-      { href: '/docs/connection-strings', label: 'Connection strings' },
-      { href: '/docs/pgvector', label: 'Vector search' },
+      { href: '/docs/platform/multi-tenancy', label: 'Multi-tenancy' },
+      { href: '/docs/platform/connection-strings', label: 'Connection strings' },
+      { href: '/docs/platform/vector-search', label: 'Vector search' },
     ]
   },
 ]
@@ -73,8 +73,8 @@ export function Sidebar() {
 
       <div className="mt-8 px-3 py-3 bg-slate-900 border border-slate-800 rounded-lg">
         <p className="text-xs text-slate-500 mb-2">Backend API</p>
-        <a href="https://aetherdb.cloud/health" target="_blank" className="text-xs text-cyan-400 code">
-          aetherdb.cloud
+        <a href="https://app.aetherdb.cloud/health" target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-400 code">
+          app.aetherdb.cloud
         </a>
       </div>
     </aside>

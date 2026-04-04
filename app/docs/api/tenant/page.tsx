@@ -5,7 +5,7 @@ export default function TenantPage() {
       <p>Every AetherDB user gets a fully isolated PostgreSQL schema. All tenant endpoints operate exclusively within your schema.</p>
 
       <h2>Get tenant info</h2>
-      <pre><code>{`GET https://aetherdb.cloud/tenant/info
+      <pre><code>{`GET https://app.aetherdb.cloud/tenant/info
 Authorization: Bearer <token>
 
 // Response 200:
@@ -17,7 +17,7 @@ Authorization: Bearer <token>
 }`}</code></pre>
 
       <h2>Get schema</h2>
-      <pre><code>{`GET https://aetherdb.cloud/tenant/schema
+      <pre><code>{`GET https://app.aetherdb.cloud/tenant/schema
 Authorization: Bearer <token>
 
 // Response 200:
@@ -35,7 +35,7 @@ Authorization: Bearer <token>
 }`}</code></pre>
 
       <h2>Create table</h2>
-      <pre><code>{`POST https://aetherdb.cloud/tenant/tables
+      <pre><code>{`POST https://app.aetherdb.cloud/tenant/tables
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -48,7 +48,7 @@ Content-Type: application/json
 }`}</code></pre>
 
       <h2>Run a query</h2>
-      <pre><code>{`POST https://aetherdb.cloud/tenant/query
+      <pre><code>{`POST https://app.aetherdb.cloud/tenant/query
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -58,7 +58,7 @@ Content-Type: application/json
 { "rows": [...], "rows_affected": 0 }`}</code></pre>
 
       <h2>Insert a row</h2>
-      <pre><code>{`POST https://aetherdb.cloud/tenant/insert
+      <pre><code>{`POST https://app.aetherdb.cloud/tenant/insert
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -68,7 +68,7 @@ Content-Type: application/json
 { "id": 2, "message": "row inserted" }`}</code></pre>
 
       <h2>AI query</h2>
-      <pre><code>{`POST https://aetherdb.cloud/tenant/ai/query
+      <pre><code>{`POST https://app.aetherdb.cloud/tenant/ai/query
 Authorization: Bearer <token>
 Content-Type: application/json
 

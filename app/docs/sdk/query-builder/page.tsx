@@ -6,7 +6,7 @@ export default function QueryBuilderPage() {
 
       <h2>Basic usage</h2>
       <pre><code>{`import { AetherDB } from 'aetherdb-js'
-const db = new AetherDB({ url: 'https://aetherdb.cloud', token: 'your-token' })
+const db = new AetherDB({ url: 'https://app.aetherdb.cloud', token: 'your-token' })
 
 const { rows } = await db.from('products').select('*').execute()`}</code></pre>
 

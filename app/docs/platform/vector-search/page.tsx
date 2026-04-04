@@ -5,7 +5,7 @@ export default function VectorSearchPage() {
       <p>AetherDB supports semantic vector search using pgvector. Store embeddings alongside your data and query by similarity — enabling AI-powered search, recommendations, and RAG.</p>
 
       <h2>Add a vector column</h2>
-      <pre><code>{`POST https://aetherdb.cloud/db/vector/column
+      <pre><code>{`POST https://app.aetherdb.cloud/db/vector/column
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -21,14 +21,14 @@ Content-Type: application/json
       </ul>
 
       <h2>Upsert an embedding</h2>
-      <pre><code>{`POST https://aetherdb.cloud/db/vector/upsert
+      <pre><code>{`POST https://app.aetherdb.cloud/db/vector/upsert
 Authorization: Bearer <token>
 Content-Type: application/json
 
 { "table": "products", "column": "embedding", "id": 42, "embedding": [0.021, -0.134, ...] }`}</code></pre>
 
       <h2>Semantic search</h2>
-      <pre><code>{`POST https://aetherdb.cloud/db/vector/search
+      <pre><code>{`POST https://app.aetherdb.cloud/db/vector/search
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -52,7 +52,7 @@ const { data } = await openai.embeddings.create({
 })
 
 // 2. Search AetherDB
-const res = await fetch('https://aetherdb.cloud/db/vector/search', {
+const res = await fetch('https://app.aetherdb.cloud/db/vector/search', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json', Authorization: \`Bearer \${token}\` },
   body: JSON.stringify({ table: 'products', column: 'embedding', embedding: data[0].embedding, limit: 5 }),

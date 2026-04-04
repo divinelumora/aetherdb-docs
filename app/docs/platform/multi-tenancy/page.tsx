@@ -27,7 +27,7 @@ SELECT * FROM tenant_42.products`}</code></pre>
 
       <h2>Agent provisioning</h2>
       <p>New tenant schemas can be provisioned programmatically in under 500ms.</p>
-      <pre><code>{`POST https://aetherdb.cloud/agent/provision
+      <pre><code>{`POST https://app.aetherdb.cloud/agent/provision
 Content-Type: application/json
 
 { "email": "agent@yourdomain.com", "password": "secure-password" }

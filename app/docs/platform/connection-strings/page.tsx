@@ -5,7 +5,7 @@ export default function ConnectionStringsPage() {
       <p>AetherDB provides a standard PostgreSQL connection string for each tenant. Use it to connect any Postgres-compatible client, ORM, or tool directly to your isolated schema.</p>
 
       <h2>Get your connection string</h2>
-      <pre><code>{`GET https://aetherdb.cloud/tenant/info
+      <pre><code>{`GET https://app.aetherdb.cloud/tenant/info
 Authorization: Bearer <token>
 
 // Response:

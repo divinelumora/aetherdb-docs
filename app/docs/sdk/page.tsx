@@ -12,12 +12,12 @@ export default function SDKPage() {
 
 // With an existing token
 const db = new AetherDB({
-  url: 'https://aetherdb.cloud',
+  url: 'https://app.aetherdb.cloud',
   token: 'your-jwt-token'
 })
 
 // Or sign in directly
-const db = new AetherDB({ url: 'https://aetherdb.cloud' })
+const db = new AetherDB({ url: 'https://app.aetherdb.cloud' })
 await db.signIn('you@example.com', 'your-password')`}</code></pre>
 
       <h2>Authentication methods</h2>

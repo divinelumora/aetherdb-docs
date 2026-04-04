@@ -5,7 +5,7 @@ export default function AuthenticationPage() {
       <p>AetherDB uses JWT-based authentication. Every request to a protected endpoint must include a valid token in the <code>Authorization</code> header.</p>
 
       <h2>Register</h2>
-      <pre><code>{`POST https://aetherdb.cloud/auth/register
+      <pre><code>{`POST https://app.aetherdb.cloud/auth/register
 Content-Type: application/json
 
 { "email": "you@example.com", "password": "yourpassword" }
@@ -14,7 +14,7 @@ Content-Type: application/json
 { "id": 1, "email": "you@example.com", "schema": "tenant_1", "created_at": "..." }`}</code></pre>
 
       <h2>Login</h2>
-      <pre><code>{`POST https://aetherdb.cloud/auth/login
+      <pre><code>{`POST https://app.aetherdb.cloud/auth/login
 Content-Type: application/json
 
 { "email": "you@example.com", "password": "yourpassword" }
@@ -26,11 +26,11 @@ Content-Type: application/json
 }`}</code></pre>
 
       <h2>Using the token</h2>
-      <pre><code>{`GET https://aetherdb.cloud/db/me
+      <pre><code>{`GET https://app.aetherdb.cloud/db/me
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...`}</code></pre>
 
       <h2>Get current user</h2>
-      <pre><code>{`GET https://aetherdb.cloud/db/me
+      <pre><code>{`GET https://app.aetherdb.cloud/db/me
 Authorization: Bearer <token>
 
 // Response 200:
@@ -41,7 +41,7 @@ Authorization: Bearer <token>
 
       <h2>SDK usage</h2>
       <pre><code>{`import { AetherDB } from 'aetherdb-js'
-const db = new AetherDB({ url: 'https://aetherdb.cloud' })
+const db = new AetherDB({ url: 'https://app.aetherdb.cloud' })
 await db.register('you@example.com', 'password')
 const { access_token } = await db.signIn('you@example.com', 'password')
 db.setToken(access_token)`}</code></pre>

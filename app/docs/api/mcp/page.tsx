@@ -5,11 +5,11 @@ export default function MCPPage() {
       <p>AetherDB exposes a Model Context Protocol (MCP) server, allowing AI agents and LLMs to interact with your database using natural language tool calls. 10 tools are available out of the box.</p>
 
       <h2>Endpoints</h2>
-      <pre><code>{`GET  https://aetherdb.cloud/mcp/tools   # list available tools
-POST https://aetherdb.cloud/mcp/call    # call a tool`}</code></pre>
+      <pre><code>{`GET  https://app.aetherdb.cloud/mcp/tools   # list available tools
+POST https://app.aetherdb.cloud/mcp/call    # call a tool`}</code></pre>
 
       <h2>List tools</h2>
-      <pre><code>{`GET https://aetherdb.cloud/mcp/tools
+      <pre><code>{`GET https://app.aetherdb.cloud/mcp/tools
 
 // Response:
 { "tools": [
@@ -26,7 +26,7 @@ POST https://aetherdb.cloud/mcp/call    # call a tool`}</code></pre>
 ]}`}</code></pre>
 
       <h2>Call a tool</h2>
-      <pre><code>{`POST https://aetherdb.cloud/mcp/call
+      <pre><code>{`POST https://app.aetherdb.cloud/mcp/call
 Content-Type: application/json
 
 { "tool": "query", "token": "<token>", "params": { "sql": "SELECT COUNT(*) FROM orders" } }
@@ -36,7 +36,7 @@ Content-Type: application/json
 
       <h2>Agent provisioning</h2>
       <p>AI agents can provision a new AetherDB tenant in under 500ms.</p>
-      <pre><code>{`POST https://aetherdb.cloud/agent/provision
+      <pre><code>{`POST https://app.aetherdb.cloud/agent/provision
 Content-Type: application/json
 
 { "email": "agent@yourdomain.com", "password": "secure-password" }

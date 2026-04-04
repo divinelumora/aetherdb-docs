@@ -3,12 +3,12 @@ export default function APIPage() {
     <>
       <h1>API reference</h1>
       <p>
-        AetherDB exposes a REST API at <code>https://aetherdb.cloud</code> and a gRPC server on port 50051.
+        AetherDB exposes a REST API at <code>https://app.aetherdb.cloud</code> and a gRPC server on port 50051.
         All protected endpoints require a JWT Bearer token.
       </p>
 
       <h2>Base URL</h2>
-      <pre><code>https://aetherdb.cloud</code></pre>
+      <pre><code>https://app.aetherdb.cloud</code></pre>
 
       <h2>Authentication</h2>
       <p>Include your JWT token in the Authorization header:</p>

@@ -9,7 +9,7 @@ export default function AIQueriesPage() {
 
       <h2>Basic usage</h2>
       <pre><code>{`import { AetherDB } from 'aetherdb-js'
-const db = new AetherDB({ url: 'https://aetherdb.cloud', token: 'your-token' })
+const db = new AetherDB({ url: 'https://app.aetherdb.cloud', token: 'your-token' })
 
 const result = await db.ai('how many users signed up this week?')
 console.log(result.generated_sql)
@@ -25,7 +25,7 @@ await db.ai('how many orders were placed yesterday?')
 await db.ai('show monthly signups for the past 6 months')`}</code></pre>
 
       <h2>REST API</h2>
-      <pre><code>{`POST https://aetherdb.cloud/tenant/ai/query
+      <pre><code>{`POST https://app.aetherdb.cloud/tenant/ai/query
 Authorization: Bearer <token>
 Content-Type: application/json
 

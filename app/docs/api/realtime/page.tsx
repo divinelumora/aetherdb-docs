@@ -5,7 +5,7 @@ export default function RealtimePage() {
       <p>AetherDB supports realtime data subscriptions using Server-Sent Events (SSE). Subscribe to a table and receive live updates whenever rows are inserted, updated, or deleted.</p>
 
       <h2>Enable realtime on a table</h2>
-      <pre><code>{`POST https://aetherdb.cloud/db/realtime/enable
+      <pre><code>{`POST https://app.aetherdb.cloud/db/realtime/enable
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -15,7 +15,7 @@ Content-Type: application/json
 { "message": "realtime enabled for orders" }`}</code></pre>
 
       <h2>Subscribe to changes</h2>
-      <pre><code>{`GET https://aetherdb.cloud/db/realtime/subscribe?table=orders
+      <pre><code>{`GET https://app.aetherdb.cloud/db/realtime/subscribe?table=orders
 Authorization: Bearer <token>
 
 // Stream of events:
@@ -26,7 +26,7 @@ data: {"event":"DELETE","table":"orders","row":{"id":42}}`}</code></pre>
       <h2>Browser usage</h2>
       <pre><code>{`const token = localStorage.getItem('aether_token')
 const source = new EventSource(
-  \`https://aetherdb.cloud/db/realtime/subscribe?table=orders&token=\${token}\`
+  \`https://app.aetherdb.cloud/db/realtime/subscribe?table=orders&token=\${token}\`
 )
 source.onmessage = (event) => {
   const { event: type, row } = JSON.parse(event.data)
@@ -36,7 +36,7 @@ source.onmessage = (event) => {
       <h2>Node.js usage</h2>
       <pre><code>{`import EventSource from 'eventsource'
 const source = new EventSource(
-  'https://aetherdb.cloud/db/realtime/subscribe?table=orders',
+  'https://app.aetherdb.cloud/db/realtime/subscribe?table=orders',
   { headers: { Authorization: \`Bearer \${token}\` } }
 )
 source.onmessage = (e) => console.log(JSON.parse(e.data))`}</code></pre>
