@@ -25,6 +25,10 @@ const nav = [
       { href: '/docs/api/authentication', label: 'Authentication' },
       { href: '/docs/api/tenant', label: 'Tenant database' },
       { href: '/docs/api/projects', label: 'Projects & API keys' },
+      { href: '/docs/api/files', label: 'File storage' },
+      { href: '/docs/api/saved-queries', label: 'Saved queries' },
+      { href: '/docs/api/webhooks', label: 'Webhooks' },
+      { href: '/docs/api/import-export', label: 'Import & Export' },
       { href: '/docs/api/realtime', label: 'Realtime' },
       { href: '/docs/api/mcp', label: 'MCP server' },
     ]
@@ -35,6 +39,8 @@ const nav = [
       { href: '/docs/platform/multi-tenancy', label: 'Multi-tenancy' },
       { href: '/docs/platform/connection-strings', label: 'Connection strings' },
       { href: '/docs/platform/vector-search', label: 'Vector search' },
+      { href: '/docs/platform/ai', label: 'AI features' },
+      { href: '/docs/platform/audit-metrics', label: 'Audit & Metrics' },
     ]
   },
 ]
