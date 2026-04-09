@@ -5,8 +5,12 @@ export const metadata: Metadata = {
   title: 'AetherDB Docs — AI-Native Database Infrastructure',
   description: 'Complete documentation for AetherDB — the database built for AI applications',
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 }
 
