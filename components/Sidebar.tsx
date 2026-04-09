@@ -53,28 +53,16 @@ export function Sidebar() {
 
   return (
     <aside className="w-60 shrink-0 border-r border-slate-800 h-screen sticky top-0 overflow-y-auto py-8 px-4">
-      <Link href="/" className="block mb-8 px-2 overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/logo.png"
-          alt="AetherDB"
-          className="w-36 object-cover object-left"
-          style={{ height: '36px' }}
-          onError={e => {
-            const el = e.currentTarget
-            el.style.display = 'none'
-            const fb = el.nextElementSibling as HTMLElement | null
-            if (fb) fb.style.display = 'block'
-          }}
-        />
-        <span
-          className="font-bold text-sm bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent"
-          style={{ display: 'none' }}
-        >
-          AetherDB
-          <span className="text-slate-600 font-normal ml-1">docs</span>
-        </span>
-      </Link>
+      <div className="mb-8 px-2 bg-black rounded-lg">
+        <Link href="/">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="AetherDB"
+            style={{ height: '40px', width: 'auto', mixBlendMode: 'screen' }}
+          />
+        </Link>
+      </div>
 
       {nav.map(group => (
         <div key={group.section} className="mb-6">

@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   description: 'Complete documentation for AetherDB — the database built for AI applications',
   icons: {
     icon: [
+      { url: '/icon.png', type: 'image/png', sizes: '512x512' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.png', type: 'image/png', sizes: '32x32' },
     ],
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
 }
 
