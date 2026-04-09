@@ -54,11 +54,11 @@ export function Sidebar() {
   return (
     <aside className="w-60 shrink-0 border-r border-slate-800 h-screen sticky top-0 overflow-y-auto py-8 px-4">
       <Link href="/" className="flex items-center gap-2 mb-8 px-2">
-        <div className="w-6 h-6 rounded bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center">
-          <div className="w-2.5 h-2.5 rounded-sm bg-cyan-400" />
-        </div>
-        <span className="font-semibold text-sm text-slate-100">
-          Aether<span className="text-cyan-400">DB</span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo.png" alt="AetherDB" className="h-7 w-auto object-contain"
+          onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none' }} />
+        <span className="font-bold text-sm bg-gradient-to-r from-cyan-400 to-fuchsia-500 bg-clip-text text-transparent">
+          AetherDB
           <span className="text-slate-600 font-normal ml-1">docs</span>
         </span>
       </Link>
