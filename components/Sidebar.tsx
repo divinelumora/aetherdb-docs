@@ -31,6 +31,8 @@ const nav = [
       { href: '/docs/api/import-export', label: 'Import & Export' },
       { href: '/docs/api/realtime', label: 'Realtime' },
       { href: '/docs/api/mcp', label: 'MCP server' },
+      { href: '/docs/api/billing', label: 'Billing' },
+      { href: '/docs/api/admin', label: 'Admin' },
     ]
   },
   {
@@ -41,6 +43,7 @@ const nav = [
       { href: '/docs/platform/vector-search', label: 'Vector search' },
       { href: '/docs/platform/ai', label: 'AI features' },
       { href: '/docs/platform/audit-metrics', label: 'Audit & Metrics' },
+      { href: '/docs/platform/billing-usage', label: 'Billing & Usage' },
     ]
   },
 ]
