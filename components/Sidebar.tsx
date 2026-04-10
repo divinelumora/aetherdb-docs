@@ -53,13 +53,13 @@ export function Sidebar() {
 
   return (
     <aside className="w-60 shrink-0 border-r border-slate-800 h-screen sticky top-0 overflow-y-auto py-8 px-4">
-      <div className="mb-8 px-2" style={{ background: 'black', borderRadius: 8 }}>
+      <div className="mb-8" style={{ background: '#0f172a' }}>
         <Link href="/">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo.png"
             alt="AetherDB"
-            style={{ height: '48px', width: 'auto', mixBlendMode: 'screen', display: 'block' }}
+            style={{ height: '56px', width: 'auto', mixBlendMode: 'screen', display: 'block' }}
           />
         </Link>
       </div>
