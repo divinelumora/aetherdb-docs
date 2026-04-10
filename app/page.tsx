@@ -43,45 +43,49 @@ export default function LandingPage() {
     <div className="min-h-screen bg-[#080B0F] text-slate-200 overflow-x-hidden">
 
       {/* ── Nav ─────────────────────────────────────────────────────────── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 h-20 bg-[#080B0F]/80 backdrop-blur-md border-b border-slate-800/60">
-        <div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/logo.png"
-            alt="AetherDB"
-            style={{ height: '80px', width: 'auto', display: 'block' }}
-          />
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-12 bg-[#050810]/95 backdrop-blur-md border-b border-slate-800/60" style={{ height: '80px' }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo.png"
+          alt="AetherDB"
+          style={{ height: '100px', width: 'auto', display: 'block', marginTop: '-10px', marginBottom: '-10px' }}
+        />
+        <div className="hidden md:flex items-center gap-8 text-sm text-slate-400 font-medium">
+          <Link href="/docs" className="hover:text-slate-100 transition-colors">Docs</Link>
+          <Link href="/docs/api" className="hover:text-slate-100 transition-colors">API</Link>
+          <Link href="/docs/sdk" className="hover:text-slate-100 transition-colors">SDK</Link>
+          <Link href="/docs/quickstart" className="hover:text-slate-100 transition-colors">Quickstart</Link>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-sm text-slate-400">
-          <Link href="/docs" className="hover:text-slate-200 transition-colors">Docs</Link>
-          <Link href="/docs/api" className="hover:text-slate-200 transition-colors">API</Link>
-          <Link href="/docs/sdk" className="hover:text-slate-200 transition-colors">SDK</Link>
-          <Link href="/docs/quickstart" className="hover:text-slate-200 transition-colors">Quickstart</Link>
-        </div>
-        <div className="flex items-center gap-3">
-          <Link href="https://app.aetherdb.cloud/login" className="text-sm text-slate-400 hover:text-slate-200 transition-colors hidden md:block">
+        <div className="flex items-center gap-4">
+          <Link href="https://app.aetherdb.cloud/login" className="text-sm text-slate-400 hover:text-slate-100 transition-colors hidden md:block font-medium">
             Sign in
           </Link>
-          <Link href="https://app.aetherdb.cloud/login" className="text-sm px-4 py-2 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-semibold rounded-lg transition-colors">
+          <Link href="https://app.aetherdb.cloud/login" className="text-sm px-5 py-2.5 bg-gradient-to-r from-cyan-400 to-cyan-300 hover:from-cyan-300 hover:to-cyan-200 text-slate-900 font-bold rounded-xl transition-all shadow-lg shadow-cyan-500/20">
             Get started free
           </Link>
         </div>
       </nav>
 
       {/* ── Hero ────────────────────────────────────────────────────────── */}
-      <section className="relative pt-40 pb-24 px-6 text-center overflow-hidden">
-        {/* Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+      <section className="relative pt-28 pb-24 px-6 text-center overflow-hidden">
+        {/* Glowing orbs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-cyan-500/8 rounded-full blur-[120px]" />
+          <div className="absolute top-20 left-1/4 w-[350px] h-[350px] bg-purple-600/8 rounded-full blur-[100px]" />
+          <div className="absolute top-10 right-1/4 w-[250px] h-[250px] bg-blue-500/8 rounded-full blur-[80px]" />
+        </div>
 
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-5xl mx-auto">
           <Badge>Now in production · April 2026</Badge>
 
-          <h1 className="mt-8 text-5xl md:text-6xl font-semibold text-slate-100 leading-tight tracking-tight">
+          <h1 className="mt-8 text-6xl md:text-7xl font-black text-white leading-[1.05] tracking-tight">
             The database built<br />
-            <span className="text-cyan-400">for AI-first apps</span>
+            <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              for AI-first apps
+            </span>
           </h1>
 
-          <p className="mt-6 text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Multi-tenant PostgreSQL with REST &amp; gRPC, natural language queries, pgvector embeddings,
             realtime SSE, file storage, webhooks, and a full JavaScript SDK — all in one platform.
           </p>
@@ -89,13 +93,13 @@ export default function LandingPage() {
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
               href="https://app.aetherdb.cloud/login"
-              className="px-7 py-3.5 bg-cyan-400 hover:bg-cyan-300 text-slate-900 font-semibold rounded-xl text-sm transition-colors shadow-lg shadow-cyan-500/20"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-cyan-300 hover:from-cyan-300 hover:to-cyan-200 text-slate-900 font-bold rounded-xl text-base transition-all shadow-xl shadow-cyan-500/25"
             >
               Start building free →
             </Link>
             <Link
               href="/docs/quickstart"
-              className="px-7 py-3.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-medium rounded-xl text-sm transition-colors"
+              className="px-8 py-4 bg-slate-900/80 hover:bg-slate-800 border border-slate-700 hover:border-slate-500 text-slate-200 hover:text-white font-semibold rounded-xl text-base transition-all"
             >
               Read the docs
             </Link>
