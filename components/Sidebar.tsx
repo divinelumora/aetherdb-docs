@@ -59,7 +59,7 @@ export function Sidebar() {
           <img
             src="/logo.png"
             alt="AetherDB"
-            style={{ height: '90px', width: 'auto', display: 'block' }}
+            style={{ height: '140px', width: 'auto', display: 'block', marginTop: '-25px', marginBottom: '-25px' }}
           />
         </Link>
       </div>
