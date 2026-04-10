@@ -44,12 +44,12 @@ export default function LandingPage() {
 
       {/* ── Nav ─────────────────────────────────────────────────────────── */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 h-20 bg-[#080B0F]/80 backdrop-blur-md border-b border-slate-800/60">
-        <div style={{ background: '#080B0F' }}>
+        <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo.png"
             alt="AetherDB"
-            style={{ height: '80px', width: 'auto', mixBlendMode: 'screen', display: 'block' }}
+            style={{ height: '80px', width: 'auto', display: 'block' }}
           />
         </div>
         <div className="hidden md:flex items-center gap-6 text-sm text-slate-400">
