@@ -5,7 +5,7 @@ export default function SavedQueriesPage() {
       <p>Saved queries let you name, store, tag, and instantly rerun SQL snippets. They persist across sessions and can optionally be made public so teammates can use them too.</p>
 
       <h2>Create a saved query</h2>
-      <pre><code>{`POST https://app.aetherdb.cloud/db/queries/saved
+      <pre><code>{`POST https://api.aetherdb.cloud/db/queries/saved
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -28,14 +28,14 @@ Content-Type: application/json
 }`}</code></pre>
 
       <h2>List saved queries</h2>
-      <pre><code>{`GET https://app.aetherdb.cloud/db/queries/saved
+      <pre><code>{`GET https://api.aetherdb.cloud/db/queries/saved
 Authorization: Bearer <token>
 
 // Returns your queries + any public queries from other users.
 { "queries": [...], "count": 5 }`}</code></pre>
 
       <h2>Run a saved query</h2>
-      <pre><code>{`POST https://app.aetherdb.cloud/db/queries/saved/{id}/run
+      <pre><code>{`POST https://api.aetherdb.cloud/db/queries/saved/{id}/run
 Authorization: Bearer <token>
 
 // Response 200:

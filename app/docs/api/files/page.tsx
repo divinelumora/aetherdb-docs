@@ -5,7 +5,7 @@ export default function FilesPage() {
       <p>AetherDB includes built-in file storage backed by PostgreSQL <code>BYTEA</code>. Upload, download, list and delete files without any extra infrastructure. Each file is scoped to the authenticated user.</p>
 
       <h2>Upload a file</h2>
-      <pre><code>{`POST https://app.aetherdb.cloud/db/files/upload
+      <pre><code>{`POST https://api.aetherdb.cloud/db/files/upload
 Authorization: Bearer <token>
 Content-Type: multipart/form-data
 
@@ -21,7 +21,7 @@ Content-Type: multipart/form-data
 }`}</code></pre>
 
       <h2>List files</h2>
-      <pre><code>{`GET https://app.aetherdb.cloud/db/files
+      <pre><code>{`GET https://api.aetherdb.cloud/db/files
 Authorization: Bearer <token>
 
 // Response 200:
@@ -33,13 +33,13 @@ Authorization: Bearer <token>
 }`}</code></pre>
 
       <h2>Download a file</h2>
-      <pre><code>{`GET https://app.aetherdb.cloud/db/files/{id}
+      <pre><code>{`GET https://api.aetherdb.cloud/db/files/{id}
 Authorization: Bearer <token>
 
 // Response 200: binary stream with correct Content-Type header`}</code></pre>
 
       <h2>Delete a file</h2>
-      <pre><code>{`DELETE https://app.aetherdb.cloud/db/files/{id}
+      <pre><code>{`DELETE https://api.aetherdb.cloud/db/files/{id}
 Authorization: Bearer <token>
 
 // Response 200:
@@ -47,7 +47,7 @@ Authorization: Bearer <token>
 
       <h2>JavaScript SDK</h2>
       <pre><code>{`import { AetherDB } from 'aetherdb-js'
-const db = new AetherDB({ url: 'https://app.aetherdb.cloud', token })
+const db = new AetherDB({ url: 'https://api.aetherdb.cloud', token })
 
 // Upload (browser)
 const input = document.querySelector('input[type=file]')

@@ -117,7 +117,7 @@ export default function LandingPage() {
               <code>{`import { AetherDB } from 'aetherdb-js'
 
 const db = new AetherDB({
-  url: 'https://app.aetherdb.cloud',
+  url: 'https://api.aetherdb.cloud',
   token: process.env.AETHERDB_TOKEN,
 })
 

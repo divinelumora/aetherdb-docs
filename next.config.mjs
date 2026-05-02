@@ -25,7 +25,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data:",
               "font-src 'self'",
-              "connect-src 'self' https://app.aetherdb.cloud",
+              "connect-src 'self' https://api.aetherdb.cloud https://app.aetherdb.cloud",
               "frame-ancestors 'self'",
             ].join('; '),
           },

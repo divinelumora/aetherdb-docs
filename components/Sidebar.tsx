@@ -83,8 +83,8 @@ export function Sidebar() {
 
       <div className="mt-8 px-3 py-3 bg-slate-900 border border-slate-800 rounded-lg">
         <p className="text-xs text-slate-500 mb-2">Backend API</p>
-        <a href="https://app.aetherdb.cloud/health" target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-400 code">
-          app.aetherdb.cloud
+        <a href="https://api.aetherdb.cloud/health" target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-400 code">
+          api.aetherdb.cloud
         </a>
       </div>
     </aside>

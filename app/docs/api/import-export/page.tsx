@@ -6,7 +6,7 @@ export default function ImportExportPage() {
 
       <h2>Import — POST /tenant/import</h2>
       <p>Upload a file via <code>multipart/form-data</code>. The table is auto-created with TEXT columns if it does not exist. Existing tables are appended to.</p>
-      <pre><code>{`POST https://app.aetherdb.cloud/tenant/import
+      <pre><code>{`POST https://api.aetherdb.cloud/tenant/import
 Authorization: Bearer <token>
 Content-Type: multipart/form-data
 
@@ -36,7 +36,7 @@ Bob,bob@example.com,NYC`}</code></pre>
 ]`}</code></pre>
 
       <h2>Export — GET /tenant/export</h2>
-      <pre><code>{`GET https://app.aetherdb.cloud/tenant/export?table=customers&format=csv
+      <pre><code>{`GET https://api.aetherdb.cloud/tenant/export?table=customers&format=csv
 Authorization: Bearer <token>
 
 // Response 200: file download stream

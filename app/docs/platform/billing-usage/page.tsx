@@ -41,7 +41,7 @@ window.location.href = url`}</code></pre>
       <ol>
         <li>Create products and prices in your Stripe dashboard for Pro and Team.</li>
         <li>Set environment variables on your AetherDB backend: <code>STRIPE_SECRET_KEY</code>, <code>STRIPE_WEBHOOK_SECRET</code>, <code>STRIPE_PRICE_PRO</code>, <code>STRIPE_PRICE_TEAM</code>.</li>
-        <li>Add a webhook endpoint in Stripe pointing to <code>https://app.aetherdb.cloud/billing/webhook</code>.</li>
+        <li>Add a webhook endpoint in Stripe pointing to <code>https://api.aetherdb.cloud/billing/webhook</code>.</li>
         <li>Subscribe to: <code>checkout.session.completed</code>, <code>customer.subscription.updated</code>, <code>customer.subscription.deleted</code>, <code>invoice.payment_failed</code>.</li>
         <li>Restart AetherDB — migrations auto-create the plans table with seeded plan rows.</li>
       </ol>

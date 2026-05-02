@@ -11,7 +11,7 @@ export default function QuickstartPage() {
       <p>Register a new account. Your isolated database schema is provisioned automatically.</p>
       <pre><code>{`import { AetherDB } from 'aetherdb-js'
 
-const db = new AetherDB({ url: 'https://app.aetherdb.cloud' })
+const db = new AetherDB({ url: 'https://api.aetherdb.cloud' })
 
 // Register — your isolated schema is created instantly
 const user = await db.register('you@example.com', 'your-password')

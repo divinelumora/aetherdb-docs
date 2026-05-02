@@ -5,7 +5,7 @@ export default function WebhooksPage() {
       <p>Webhooks let you receive HTTP callbacks whenever data changes in your tenant database. Register a URL for a table and AetherDB will POST a signed JSON payload after every insert, update, or delete.</p>
 
       <h2>Register a webhook</h2>
-      <pre><code>{`POST https://app.aetherdb.cloud/tenant/webhooks
+      <pre><code>{`POST https://api.aetherdb.cloud/tenant/webhooks
 Authorization: Bearer <token>
 Content-Type: application/json
 
@@ -49,7 +49,7 @@ function verifySignature(body, secret, header) {
 }`}</code></pre>
 
       <h2>Enable / Disable</h2>
-      <pre><code>{`POST https://app.aetherdb.cloud/tenant/webhooks/{id}/toggle
+      <pre><code>{`POST https://api.aetherdb.cloud/tenant/webhooks/{id}/toggle
 Authorization: Bearer <token>
 Content-Type: application/json
 
