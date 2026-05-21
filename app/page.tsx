@@ -41,7 +41,7 @@ export default function LandingPage() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-12 bg-[#050810]/95 backdrop-blur-md border-b border-slate-800/60" style={{ height: '80px' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/logo.svg" alt="AetherDB" style={{ height: '100px', width: 'auto', display: 'block', marginTop: '-10px', marginBottom: '-10px' }} />
+        <img src="/logo.svg" alt="AetherDB" style={{ height: '64px', width: 'auto', display: 'block' }} />
         <div className="hidden md:flex items-center gap-8 text-sm text-slate-400 font-medium">
           <Link href="/docs" className="hover:text-slate-100 transition-colors">Docs</Link>
           <Link href="/docs/api" className="hover:text-slate-100 transition-colors">API</Link>
